@@ -8,20 +8,20 @@ so whenever you have this kind of huge it is always better to use DVC along with
 
 DVC works along with git, DVC will be used for tracking data files and git will track the entire other code information
 
- 1. **initialize DVC**	
+ 1. **initialize DVC**    	
 `dvc init`      
 after initialization, any file I add, DVC will start versioning this specific file
 
-2. **File Tracking**		
-if we want to track any code file using git we use `git add FILE` we will do the same thing here
-`dvc add data/data.txt`
+2. **File Tracking**    		
+if we want to track any code file using git we use `git add FILE` we will do the same thing here     
+`dvc add data/data.txt`   
 **data.txt** will not be tracked with git anymore, data.txt added by DVC to .gitignore, git will track .gitignore and **data.txt.dvc** only
 
-**The Question raised here is what does data.txt.dvc used for ??**		
+**The Question raised here is what does data.txt.dvc used for ??**     		
 it contains a unique hash key for data.txt file content, once you change the data.txt content, the hash key will be changed
-so now we don't care about data.txt we can store it anywhere we want like the s3 bucket, we only care about data.txt.dvc
+so now we don't care about data.txt we can store it anywhere we want like the s3 bucket, we only care about data.txt.dvc    
 
-**DVC** 		
+**DVC**     		
 it hashes the content of the file in the cache folder and it creates a hash key for this folder and this hash key will be saved in data.txt.dvc
 
 ![HashKey](https://github.com/ahmedbasemdev/Data-Version-Control/blob/master/Images/hash_key.png?raw=true)
