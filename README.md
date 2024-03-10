@@ -8,8 +8,8 @@ so whenever you have this kind of huge it is always better to use DVC along with
 
 DVC works along with git, DVC will be used for tracking data files and git will track the entire other code information
 
- 1. **initialize DVC**		
-`dvc init`
+ 1. **initialize DVC**	
+`dvc init`      
 after initialization, any file I add, DVC will start versioning this specific file
 
 2. **File Tracking**		
